@@ -1,0 +1,72 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+ext{
+    kotlin_version = "1.5.3"
+}
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    api 'androidx.core:core-ktx:1.3.2'
+    api 'androidx.appcompat:appcompat:1.2.0'
+    api 'com.google.android.material:material:1.3.0'
+    api 'androidx.constraintlayout:constraintlayout:2.0.4'
+    api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    api 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    api 'com.squareup.retrofit2:retrofit:2.9.0'
+    api 'com.squareup.retrofit2:converter-gson:2.9.0'
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.6'
+    // 协程核心库
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3"
+    // 协程Android支持库
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3"
+    // 协程Java8支持库
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.4.3"
+
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+    api "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
+    api "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
+    //MMKV 腾讯封装 优化sp
+    api "com.tencent:mmkv-static:1.2.9"
+    api 'com.orhanobut:logger:2.2.0'
+    api 'com.lxj:xpopup:2.2.23'
+    //三个点 横向...
+    api "com.wang.avi:library:2.1.3"
+    api "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0"
+    api "com.scwang.smartrefresh:SmartRefreshHeader:1.1.0"
+    //图片加载
+    api 'com.github.bumptech.glide:glide:4.11.0'
+    api "com.github.donkingliang:LabelsView:1.6.1"
+    implementation project(":reactivehttp")
+}

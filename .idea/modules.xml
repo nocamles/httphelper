@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HttpHelper.iml" filepath="$PROJECT_DIR$/.idea/modules/HttpHelper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HttpHelper.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HttpHelper.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/commom/HttpHelper.commom.iml" filepath="$PROJECT_DIR$/.idea/modules/commom/HttpHelper.commom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reactivehttp/HttpHelper.reactivehttp.iml" filepath="$PROJECT_DIR$/.idea/modules/reactivehttp/HttpHelper.reactivehttp.iml" />
+    </modules>
+  </component>
+</project>

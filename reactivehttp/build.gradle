@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+ext{
+    livedata_version = "2.2.0"
+    kotlin_version = "1.5.3"
+}
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        minSdkVersion 21
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    task makeJar(type: Copy) {
+
+        delete'build/libs/test.jar'
+
+        from('build/intermediates/bundles/debug/')
+
+
+        into('build/libs/')
+
+        include('classes.jar')
+
+        rename ('classes.jar','test.jar')
+
+    }
+
+    makeJar.dependsOn(build)
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$livedata_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-core-ktx:$livedata_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$livedata_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$livedata_version"
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
+}
