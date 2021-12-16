@@ -1,4 +1,4 @@
--keep class github.leavesc.reactivehttp.base.BaseReactiveActivity
+-keep class github.nocamles.httphelper.base.BaseReactiveActivity
 
 -keepnames class kotlinx.coroutines.internal.MainDispatcherFactory {}
 -keepnames class kotlinx.coroutines.CoroutineExceptionHandler {}
