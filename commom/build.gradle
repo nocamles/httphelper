@@ -6,9 +6,6 @@ plugins {
 }
 group = 'com.github.hank'
 version = '1.0.3'
-ext{
-    kotlin_version = "1.5.3"
-}
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -33,11 +30,11 @@ android {
         enabled = true
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = '11'
+        jvmTarget = '1.8'
     }
 }
 
@@ -55,6 +52,8 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3"
     // 协程Android支持库
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3"
+
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
 
     implementation 'com.lxj:xpopup:2.2.23'
     //图片加载
