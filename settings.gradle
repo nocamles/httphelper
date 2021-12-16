@@ -8,4 +8,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "HttpHelper"
-include ':app',':reactivehttp',':commom'
+include ':libdemo',':reactivehttp',':commom'

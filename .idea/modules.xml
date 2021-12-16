@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/HttpHelper.iml" filepath="$PROJECT_DIR$/.idea/modules/HttpHelper.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HttpHelper.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HttpHelper.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/commom/HttpHelper.commom.iml" filepath="$PROJECT_DIR$/.idea/modules/commom/HttpHelper.commom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HttpHelper.libdemo.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HttpHelper.libdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/reactivehttp/HttpHelper.reactivehttp.iml" filepath="$PROJECT_DIR$/.idea/modules/reactivehttp/HttpHelper.reactivehttp.iml" />
     </modules>
   </component>
