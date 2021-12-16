@@ -2,6 +2,9 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'maven-publish'
 
+group = 'com.gitee.gautohank'
+version = '1.0'
+
 android {
     compileSdkVersion 30
     defaultConfig {
@@ -37,4 +40,17 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3"
 
     implementation 'com.lxj:xpopup:2.2.23'
+}
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'github.nocamles'
+                artifactId = 'httphelper'
+                version = '1.0'
+            }
+        }
+    }
 }
