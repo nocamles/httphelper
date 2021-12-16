@@ -1,7 +1,6 @@
 package org.hank.commom.utils
 
 import android.view.View
-import com.orhanobut.logger.Logger
 
 //  ┏┓　　　┏┓
 //┏┛┻━━━┛┻┓
@@ -33,7 +32,5 @@ fun View.Click(listener: (view: View) -> Unit) {
     if (nowTime - lastClick > 200) {
         lastClick = nowTime
         listener(this)
-    } else {
-        Logger.d("click too fast")
     }
 }

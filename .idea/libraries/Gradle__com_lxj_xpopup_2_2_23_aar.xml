@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.lxj:xpopup:2.2.23@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f204c6352040ae140f38097a1eee4ee5/transformed/jetified-xpopup-2.2.23/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/fc0112f5c32476b1a3412c6fc0af6fad/transformed/jetified-xpopup-2.2.23/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f204c6352040ae140f38097a1eee4ee5/transformed/jetified-xpopup-2.2.23/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f204c6352040ae140f38097a1eee4ee5/transformed/jetified-xpopup-2.2.23/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f204c6352040ae140f38097a1eee4ee5/transformed/jetified-xpopup-2.2.23/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/fc0112f5c32476b1a3412c6fc0af6fad/transformed/jetified-xpopup-2.2.23/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fc0112f5c32476b1a3412c6fc0af6fad/transformed/jetified-xpopup-2.2.23/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fc0112f5c32476b1a3412c6fc0af6fad/transformed/jetified-xpopup-2.2.23/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.lxj/xpopup/2.2.23/f1edbddde029a0ccef669ced9ff7535bc84949f8/xpopup-2.2.23-javadoc.jar!/" />
