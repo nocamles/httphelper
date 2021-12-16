@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-
+apply plugin: 'maven-publish'
+group = 'com.github.hank'
+version = '1.0.3'
 android {
     compileSdkVersion 30
     defaultConfig {
@@ -8,26 +10,9 @@ android {
         consumerProguardFiles 'consumer-rules.pro'
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
-
-    task makeJar(type: Copy) {
-
-        delete'build/libs/test.jar'
-
-        from('build/intermediates/bundles/debug/')
-
-
-        into('build/libs/')
-
-        include('classes.jar')
-
-        rename ('classes.jar','test.jar')
-
-    }
-
-    makeJar.dependsOn(build)
 }
 
 dependencies {
@@ -43,4 +28,17 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
+}
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.hank'
+                artifactId = 'httphelper'
+                version = '1.0.3'
+            }
+        }
+    }
 }
