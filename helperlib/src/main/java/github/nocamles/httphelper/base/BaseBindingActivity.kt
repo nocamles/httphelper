@@ -32,7 +32,7 @@ abstract class BaseBindingActivity<T : ViewDataBinding> : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        dataBinding = DataBindingUtil.setContentView(this, layoutResId)
+        dataBinding = DataBindingUtil.setContentView(this, layoutResId!!)
         dataBinding.lifecycleOwner = this
     }
 

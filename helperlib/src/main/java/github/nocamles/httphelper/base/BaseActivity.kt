@@ -12,12 +12,13 @@ import androidx.lifecycle.lifecycleScope
 import com.lxj.xpopup.XPopup
 import com.lxj.xpopup.impl.ConfirmPopupView
 import com.lxj.xpopup.impl.LoadingPopupView
+import github.nocamles.httphelper.R
 import github.nocamles.httphelper.viewmodel.IUIActionEventObserver
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 
 abstract class BaseActivity : AppCompatActivity(), IUIActionEventObserver {
-    abstract val layoutResId: Int
+    protected var layoutResId: Int? = null
 
     override val lifecycleSupportedScope: CoroutineScope
         get() = lifecycleScope
@@ -35,7 +36,8 @@ abstract class BaseActivity : AppCompatActivity(), IUIActionEventObserver {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(layoutResId)
+        if (layoutResId != null)
+            setContentView(layoutResId!!)
         //暗色  statusbar透明
         immersive(true)
         rootView = (findViewById<ViewGroup>(android.R.id.content))
@@ -67,7 +69,7 @@ abstract class BaseActivity : AppCompatActivity(), IUIActionEventObserver {
     override fun showToast(msg: String) {
         if (msg.isNotBlank()) {
             xPop = XPopup.Builder(this)
-                .asConfirm("提示", msg) { xPop.dismiss() }
+                .asConfirm("tips", resources.getString(R.string.tips)) { xPop.dismiss() }
             xPop.show()
         }
     }

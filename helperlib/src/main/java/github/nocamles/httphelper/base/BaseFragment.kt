@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import com.lxj.xpopup.XPopup
 import com.lxj.xpopup.impl.ConfirmPopupView
 import com.lxj.xpopup.impl.LoadingPopupView
+import github.nocamles.httphelper.R
 import github.nocamles.httphelper.viewmodel.IUIActionEventObserver
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
@@ -82,7 +83,7 @@ abstract class BaseFragment : Fragment,
     override fun showToast(msg: String) {
         if (msg.isNotBlank()) {
             xPop = XPopup.Builder(context)
-                .asConfirm("提示", msg) { xPop.dismiss() }
+                .asConfirm("tips", resources.getString(R.string.tips)) { xPop.dismiss() }
             xPop.show()
         }
     }
