@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/HttpHelper.iml" filepath="$PROJECT_DIR$/.idea/modules/HttpHelper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo/HttpHelper.demo.iml" filepath="$PROJECT_DIR$/.idea/modules/demo/HttpHelper.demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/helperlib/HttpHelper.helperlib.iml" filepath="$PROJECT_DIR$/.idea/modules/helperlib/HttpHelper.helperlib.iml" />
     </modules>
   </component>

@@ -83,7 +83,7 @@ abstract class BaseFragment : Fragment,
     override fun showToast(msg: String) {
         if (msg.isNotBlank()) {
             xPop = XPopup.Builder(context)
-                .asConfirm("tips", resources.getString(R.string.tips)) { xPop.dismiss() }
+                .asConfirm(resources.getString(R.string.tips), msg) { xPop.dismiss() }
             xPop.show()
         }
     }
@@ -95,7 +95,7 @@ abstract class BaseFragment : Fragment,
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         rootView = super.onCreateView(inflater, container, savedInstanceState)!!
         return rootView

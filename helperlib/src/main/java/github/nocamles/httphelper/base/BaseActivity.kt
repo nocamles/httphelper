@@ -18,7 +18,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 
 abstract class BaseActivity : AppCompatActivity(), IUIActionEventObserver {
-    protected var layoutResId: Int? = null
+    abstract val layoutResId: Int
 
     override val lifecycleSupportedScope: CoroutineScope
         get() = lifecycleScope
@@ -36,8 +36,7 @@ abstract class BaseActivity : AppCompatActivity(), IUIActionEventObserver {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (layoutResId != null)
-            setContentView(layoutResId!!)
+        setContentView(layoutResId)
         //暗色  statusbar透明
         immersive(true)
         rootView = (findViewById<ViewGroup>(android.R.id.content))
@@ -69,7 +68,7 @@ abstract class BaseActivity : AppCompatActivity(), IUIActionEventObserver {
     override fun showToast(msg: String) {
         if (msg.isNotBlank()) {
             xPop = XPopup.Builder(this)
-                .asConfirm("tips", resources.getString(R.string.tips)) { xPop.dismiss() }
+                .asConfirm(resources.getString(R.string.tips), msg) { xPop.dismiss() }
             xPop.show()
         }
     }
