@@ -39,9 +39,9 @@ abstract class BaseRemoteDataSource<Api : Any>(
          */
         private val defaultOkHttpClient by lazy {
             OkHttpClient.Builder()
-                .readTimeout(10000L, TimeUnit.MILLISECONDS)
-                .writeTimeout(10000L, TimeUnit.MILLISECONDS)
-                .connectTimeout(10000L, TimeUnit.MILLISECONDS)
+                .readTimeout(60000L, TimeUnit.MILLISECONDS)
+                .writeTimeout(60000L, TimeUnit.MILLISECONDS)
+                .connectTimeout(60000L, TimeUnit.MILLISECONDS)
                 .retryOnConnectionFailure(true).build()
         }
 
