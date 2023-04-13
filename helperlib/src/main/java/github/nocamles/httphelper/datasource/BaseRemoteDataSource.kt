@@ -105,7 +105,7 @@ abstract class BaseRemoteDataSource<Api : Any>(
         return apiService
     }
 
-    protected fun handleException(throwable: Throwable, callback: BaseRequestCallback?) {
+    protected open fun handleException(throwable: Throwable, callback: BaseRequestCallback?) {
         if (callback == null) {
             return
         }
