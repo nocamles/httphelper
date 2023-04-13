@@ -1,11 +1,11 @@
 package github.nocamles.httphelper.callback
 
 import github.nocamles.httphelper.exception.BaseHttpException
-open class BaseRequestCallback(internal var onStart: (() -> Unit)? = null,
-                               internal var onCancelled: (() -> Unit)? = null,
-                               internal var onFailed: ((BaseHttpException) -> Unit)? = null,
-                               internal var onFailToast: (() -> Boolean) = { true },
-                               internal var onFinally: (() -> Unit)? = null) {
+open class BaseRequestCallback(var onStart: (() -> Unit)? = null,
+                               var onCancelled: (() -> Unit)? = null,
+                               var onFailed: ((BaseHttpException) -> Unit)? = null,
+                               var onFailToast: (() -> Boolean) = { true },
+                               var onFinally: (() -> Unit)? = null) {
 
     /**
      * 在显示 Loading 之后且开始网络请求之前执行

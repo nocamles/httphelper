@@ -1,8 +1,8 @@
 package github.nocamles.httphelper.callback
 
 class RequestCallback<Data>(
-    internal var onSuccess: ((Data) -> Unit)? = null,
-    internal var onSuccessIO: (suspend (Data) -> Unit)? = null
+    var onSuccess: ((Data) -> Unit)? = null,
+    var onSuccessIO: (suspend (Data) -> Unit)? = null
 ) : BaseRequestCallback() {
 
     /**
@@ -24,8 +24,8 @@ class RequestCallback<Data>(
 }
 
 class RequestPairCallback<DataA, DataB>(
-    internal var onSuccess: ((dataA: DataA, dataB: DataB) -> Unit)? = null,
-    internal var onSuccessIO: (suspend (dataA: DataA, dataB: DataB) -> Unit)? = null
+    var onSuccess: ((dataA: DataA, dataB: DataB) -> Unit)? = null,
+    var onSuccessIO: (suspend (dataA: DataA, dataB: DataB) -> Unit)? = null
 ) : BaseRequestCallback() {
 
     /**
@@ -47,8 +47,8 @@ class RequestPairCallback<DataA, DataB>(
 }
 
 class RequestTripleCallback<DataA, DataB, DataC>(
-    internal var onSuccess: ((dataA: DataA, dataB: DataB, dataC: DataC) -> Unit)? = null,
-    internal var onSuccessIO: (suspend (dataA: DataA, dataB: DataB, dataC: DataC) -> Unit)? = null
+    var onSuccess: ((dataA: DataA, dataB: DataB, dataC: DataC) -> Unit)? = null,
+    var onSuccessIO: (suspend (dataA: DataA, dataB: DataB, dataC: DataC) -> Unit)? = null
 ) : BaseRequestCallback() {
 
     /**
@@ -70,8 +70,8 @@ class RequestTripleCallback<DataA, DataB, DataC>(
 }
 
 class RequestFourCallback<DataA, DataB, DataC,DataD>(
-    internal var onSuccess: ((dataA: DataA, dataB: DataB, dataC: DataC,dataD:DataD) -> Unit)? = null,
-    internal var onSuccessIO: (suspend (dataA: DataA, dataB: DataB, dataC: DataC,dataD:DataD) -> Unit)? = null
+    var onSuccess: ((dataA: DataA, dataB: DataB, dataC: DataC,dataD:DataD) -> Unit)? = null,
+    var onSuccessIO: (suspend (dataA: DataA, dataB: DataB, dataC: DataC,dataD:DataD) -> Unit)? = null
 ) : BaseRequestCallback() {
 
     /**
