@@ -16,7 +16,7 @@ abstract class RemoteDataSource<Api : Any>(iUiActionEvent: IUIActionEvent?, apiS
         return enqueue(apiFun = apiFun, showLoading = true, baseUrl = baseUrl, callbackFun = callbackFun)
     }
 
-    fun <Data> enqueue(apiFun: suspend Api.() -> IHttpWrapBean<Data>,
+    protected open fun <Data> enqueue(apiFun: suspend Api.() -> IHttpWrapBean<Data>,
                        showLoading: Boolean = false,
                        baseUrl: String = "",
                        callbackFun: (RequestCallback<Data>.() -> Unit)? = null): Job {
@@ -91,7 +91,7 @@ abstract class RemoteDataSource<Api : Any>(iUiActionEvent: IUIActionEvent?, apiS
         }
     }
 
-    private suspend fun <Data> onGetResponse(callback: RequestCallback<Data>?, httpData: Data) {
+    suspend fun <Data> onGetResponse(callback: RequestCallback<Data>?, httpData: Data) {
         callback?.let {
             withNonCancellable {
                 callback.onSuccess?.let {

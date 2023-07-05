@@ -2,10 +2,12 @@ package github.nocamles.demo
 import com.franmontiel.persistentcookiejar.PersistentCookieJar
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache
 import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersistor
-import github.nocamles.demo.ApiService
-import github.nocamles.demo.MyApplication
+import github.nocamles.httphelper.bean.IHttpWrapBean
+import github.nocamles.httphelper.callback.RequestCallback
 import github.nocamles.httphelper.datasource.RemoteExtendDataSource
+import github.nocamles.httphelper.exception.ServerCodeBadException
 import github.nocamles.httphelper.viewmodel.IUIActionEvent
+import kotlinx.coroutines.Job
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -60,4 +62,41 @@ class SelfRemoteDataSource(iActionEvent: IUIActionEvent?) :
             .build()
     }
 
+    override fun <Data> enqueue(
+        apiFun: suspend ApiService.() -> IHttpWrapBean<Data>,
+        showLoading: Boolean,
+        baseUrl: String,
+        callbackFun: (RequestCallback<Data>.() -> Unit)?
+    ): Job {
+        return launchMain {
+            val callback = if (callbackFun == null) null else RequestCallback<Data>().apply {
+                callbackFun.invoke(this)
+            }
+            try {
+                if (showLoading) {
+                    showLoading(coroutineContext[Job])
+                }
+                callback?.onStart?.invoke()
+                val response: IHttpWrapBean<Data>
+                try {
+                    response = apiFun.invoke(getApiService(baseUrl))
+                    if (!response.httpIsSuccess) {
+                        throw ServerCodeBadException(response)
+                    }
+                } catch (throwable: Throwable) {
+                    handleException(throwable, callback)
+                    return@launchMain
+                }
+                onGetResponse(callback, response.httpData)
+            } finally {
+                try {
+                    callback?.onFinally?.invoke()
+                } finally {
+                    if (showLoading) {
+                        dismissLoading()
+                    }
+                }
+            }
+        }
+    }
 }
