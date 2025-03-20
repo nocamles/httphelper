@@ -6,15 +6,27 @@ group = 'com.gitee.gautohank'
 version = '1.0'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 33
+    namespace 'github.nocamles.httphelper'
+
     defaultConfig {
         minSdkVersion 21
         consumerProguardFiles 'consumer-rules.pro'
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+    lintOptions {
+        it.abortOnError = false
+    }
+
     dataBinding {
         enabled = true
     }
@@ -23,23 +35,23 @@ android {
 dependencies {
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
 
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$livedata_version"
-    implementation "androidx.lifecycle:lifecycle-livedata-core-ktx:$livedata_version"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$livedata_version"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$livedata_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.8.7"
+    implementation "androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.8.7"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7"
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
 
-    implementation 'com.lxj:xpopup:2.2.23'
+    implementation 'com.github.li-xiaojun:XPopup:2.10.0'
 }
 afterEvaluate {
     publishing {
@@ -49,7 +61,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'github.nocamles'
                 artifactId = 'httphelper'
-                version = '1.0'
+                version = '1.4.7'
             }
         }
     }

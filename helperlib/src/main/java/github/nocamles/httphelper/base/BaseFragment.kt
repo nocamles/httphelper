@@ -89,7 +89,7 @@ abstract class BaseFragment : Fragment,
     }
 
     override fun finishView() {
-        activity!!.onBackPressed()
+        requireActivity().onBackPressed()
     }
 
     override fun onCreateView(
