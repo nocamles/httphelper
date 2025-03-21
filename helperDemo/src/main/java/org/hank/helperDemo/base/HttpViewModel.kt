@@ -1,6 +1,8 @@
-package org.hank.helperDemo
+package org.hank.helperDemo.base
+
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
+import org.hank.helperDemo.http.HomeBannerBean
 
 //  ┏┓　　　┏┓
 //┏┛┻━━━┛┻┓
@@ -28,17 +30,15 @@ import androidx.lifecycle.MutableLiveData
 class HttpViewModel : BaseViewModel() {
     val TAG = this.javaClass.name
 
-    var bannerBeanLiveData :MutableLiveData<MutableList<HomeBannerBean>> = MutableLiveData()
+    var bannerBeanLiveData: MutableLiveData<MutableList<HomeBannerBean>> = MutableLiveData()
 
     fun getBanner() {
-        remoteDataSource.enqueueLoading({
-           getHomeBanner()
-        }) {
+        remoteDataSource.enqueueLoading({ getHomeBanner() }) {
             onSuccess {
                 bannerBeanLiveData.postValue(it)
             }
             onFailed {
-                Log.d(TAG,it.message!!)
+                Log.d(TAG, it.message!!)
             }
         }
     }

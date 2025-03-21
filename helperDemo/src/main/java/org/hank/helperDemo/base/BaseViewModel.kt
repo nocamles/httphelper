@@ -1,4 +1,4 @@
-package org.hank.helperDemo
+package org.hank.helperDemo.base
 import github.nocamles.httphelper.base.BaseReactiveViewModel
 
 //  ┏┓　　　┏┓

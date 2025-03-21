@@ -8,6 +8,7 @@ import com.google.gson.Gson
 import github.nocamles.httphelper.base.BaseActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import org.hank.helperDemo.base.HttpViewModel
 import kotlin.getValue
 
 class MainActivity : BaseActivity() {

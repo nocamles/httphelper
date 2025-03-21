@@ -1,4 +1,4 @@
-package org.hank.helperDemo
+package org.hank.helperDemo.base
 
 import com.franmontiel.persistentcookiejar.BuildConfig
 import com.franmontiel.persistentcookiejar.PersistentCookieJar
@@ -9,6 +9,9 @@ import github.nocamles.httphelper.datasource.RemoteExtendDataSource
 import github.nocamles.httphelper.viewmodel.IUIActionEvent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.hank.helperDemo.http.ApiService
+import org.hank.helperDemo.http.HttpConfig
+import org.hank.helperDemo.MyApplication
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
@@ -27,7 +30,7 @@ class SelfRemoteDataSource(iActionEvent: IUIActionEvent?) :
             var cookieJar =
                 PersistentCookieJar(
                     SetCookieCache(),
-                    SharedPrefsCookiePersistor(MyApplication.context)
+                    SharedPrefsCookiePersistor(MyApplication.Companion.context)
                 )
 
             val builder = OkHttpClient.Builder()

@@ -9,6 +9,8 @@
       <root url="file://$PROJECT_DIR$/../../.gradle/caches/8.10/transforms/662540548c9979632f9d835f70c21eb3/transformed/jetified-XPopup-2.10.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../.gradle/caches/modules-2/files-2.1/com.github.li-xiaojun/XPopup/2.10.0/fef290ff0aaa8d0583d5c16eca87009d27334f3d/XPopup-2.10.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

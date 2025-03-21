@@ -1,7 +1,6 @@
-package org.hank.helperDemo
+package org.hank.helperDemo.http
 
-import retrofit2.http.*
-
+import retrofit2.http.GET
 
 interface ApiService {
     @GET("banner/json")

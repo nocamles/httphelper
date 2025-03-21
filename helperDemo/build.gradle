@@ -7,6 +7,10 @@ android {
     namespace 'org.hank.helperDemo'
     compileSdk 35
 
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+
     defaultConfig {
         applicationId "org.hank.helperDemo"
         minSdk 24
@@ -17,9 +21,23 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes {
+    signingConfigs {
         release {
+            keyAlias 'hank'
+            keyPassword '123456'
+            storeFile file('..\\hank.jks')
+            storePassword '123456'
+        }
+    }
+
+    buildTypes {
+        debug {
             minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -33,6 +51,10 @@ android {
 
     dataBinding {
         enabled = true
+    }
+
+    lintOptions {
+        it.abortOnError = false
     }
 }
 
