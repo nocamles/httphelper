@@ -61,7 +61,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'github.nocamles'
                 artifactId = 'httphelper'
-                version = '1.4.7'
+                version = '1.0.4.7'
             }
         }
     }

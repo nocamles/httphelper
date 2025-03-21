@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/HttpHelper.iml" filepath="$PROJECT_DIR$/.idea/modules/HttpHelper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/helperDemo/HttpHelper.helperDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/helperDemo/HttpHelper.helperDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/helperDemo/HttpHelper.helperDemo.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/helperDemo/HttpHelper.helperDemo.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/helperDemo/HttpHelper.helperDemo.main.iml" filepath="$PROJECT_DIR$/.idea/modules/helperDemo/HttpHelper.helperDemo.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/helperDemo/HttpHelper.helperDemo.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/helperDemo/HttpHelper.helperDemo.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/helperlib/HttpHelper.helperlib.iml" filepath="$PROJECT_DIR$/.idea/modules/helperlib/HttpHelper.helperlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/helperlib/HttpHelper.helperlib.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/helperlib/HttpHelper.helperlib.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/helperlib/HttpHelper.helperlib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/helperlib/HttpHelper.helperlib.main.iml" />

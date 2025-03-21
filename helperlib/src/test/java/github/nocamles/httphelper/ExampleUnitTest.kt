@@ -1,4 +1,4 @@
-package github.leavesc.httphelper
+package github.nocamles.httphelper
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.databinding:databinding-adapters:8.3.2@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/8.10/transforms/34af3254e9c3c081a5e399354d3aabf2/transformed/databinding-adapters-8.3.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/8.10/transforms/34af3254e9c3c081a5e399354d3aabf2/transformed/databinding-adapters-8.3.2/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/8.10/transforms/34af3254e9c3c081a5e399354d3aabf2/transformed/databinding-adapters-8.3.2/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../.gradle/caches/8.10/transforms/34af3254e9c3c081a5e399354d3aabf2/transformed/databinding-adapters-8.3.2/res" />
+      <root url="file://$PROJECT_DIR$/../../.gradle/caches/8.10/transforms/34af3254e9c3c081a5e399354d3aabf2/transformed/databinding-adapters-8.3.2/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../.gradle/caches/8.10/transforms/34af3254e9c3c081a5e399354d3aabf2/transformed/databinding-adapters-8.3.2/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-adapters/8.3.2/eec59e672c835bd1fe1a97a12180f0b633adb3be/databinding-adapters-8.3.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-adapters/8.3.2/eec59e672c835bd1fe1a97a12180f0b633adb3be/databinding-adapters-8.3.2-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -1,2 +1,3 @@
 rootProject.name = "HttpHelper"
 include ':helperlib'
+include ':helperDemo'
