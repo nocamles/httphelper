@@ -2,7 +2,7 @@ package org.hank.helperDemo.base
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import org.hank.helperDemo.http.HomeBannerBean
+import org.hank.helperDemo.bean.HomeBannerBean
 
 //  ┏┓　　　┏┓
 //┏┛┻━━━┛┻┓

@@ -69,7 +69,4 @@
 -keep public class * extends android.app.Activity
 -keep public class * extends android.app.Service
 -keep public class * extends androidx.lifecycle.ViewModel
--keep public class * extends github.nocamles.httphelper.datasource.BaseRemoteDataSource
-
--keep class github.nocamles.httphelper.** {*;}
--keep class org.hank.helperDemo.http.**{*;}
+-keep class org.hank.helperDemo.bean.**{*;}

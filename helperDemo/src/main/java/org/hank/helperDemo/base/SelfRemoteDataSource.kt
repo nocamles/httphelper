@@ -9,8 +9,8 @@ import github.nocamles.httphelper.datasource.RemoteExtendDataSource
 import github.nocamles.httphelper.viewmodel.IUIActionEvent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import org.hank.helperDemo.http.ApiService
-import org.hank.helperDemo.http.HttpConfig
+import org.hank.helperDemo.base.ApiService
+import org.hank.helperDemo.base.HttpConfig
 import org.hank.helperDemo.MyApplication
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
